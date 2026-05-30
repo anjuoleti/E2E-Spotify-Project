@@ -1,0 +1,33 @@
+{
+	"name": "Json_dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "adls_spotify_project",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"folde_name": {
+				"type": "string"
+			},
+			"file_name": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().file_name",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().folde_name",
+					"type": "Expression"
+				}
+			}
+		},
+		"schema": {}
+	}
+}
