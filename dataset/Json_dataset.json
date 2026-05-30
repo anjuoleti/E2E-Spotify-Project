@@ -25,7 +25,8 @@
 				"folderPath": {
 					"value": "@dataset().folde_name",
 					"type": "Expression"
-				}
+				},
+				"fileSystem": "source"
 			}
 		},
 		"schema": {}
