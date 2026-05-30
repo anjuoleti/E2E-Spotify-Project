@@ -1,0 +1,15 @@
+{
+	"name": "anjnuprojectadf",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Enabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "2ae42148-765e-4e6f-a1dc-d024c53b6e0b",
+		"tenantId": "83f36ba7-5b64-42d1-8d85-d58519f8f07e"
+	}
+}
