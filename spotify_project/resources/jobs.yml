@@ -1,0 +1,18 @@
+resources:
+  jobs:
+    New_Job_2026_06_08_04_22_57:
+      name: New Job 2026-06-08 04:22:57
+      tasks:
+        - task_key: silver_nb
+          notebook_task:
+            notebook_path: ../src/spotify_project/transformations/silver/silver_nb.ipynb
+            source: WORKSPACE
+        - task_key: gold_nb
+          depends_on:
+            - task_key: silver_nb
+          notebook_task:
+            notebook_path: ../src/spotify_project/transformations/gold/gold_nb.ipynb
+            source: WORKSPACE
+      queue:
+        enabled: true
+      performance_target: PERFORMANCE_OPTIMIZED
